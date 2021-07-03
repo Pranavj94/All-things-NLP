@@ -41,7 +41,7 @@ class data_explorer:
         print(f'Number of text records : {self.data.shape[0]}')
         print(f'Number of unique texts : {self.data[self.text_column].nunique()}')
         print(f'Number of missing texts : {self.data[self.text_column].isna().sum()}')
-
+        print()
         display(out_df)
 
 
