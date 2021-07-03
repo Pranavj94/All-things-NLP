@@ -24,15 +24,15 @@ def lower_case(text):
     return(text.lower())
 
 def remove_linebreaks(text):
-    text = re.sub("\n", " ", text)
+    text = re.sub(r"\n", " ", text)
     return(text)
 
 def identify_email_id(text):
-    text = re.sub("\S+@\S+", "email_id", text)
+    text = re.sub(r"\S+@\S+", "email_id", text)
     return(text)
 
 def identify_webaddress(text):
-    text=re.sub("((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*", 'webaddress',text)
+    text=re.sub(r"((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*", 'webaddress',text)
     return(text)
 
 def identify_money_symbol(text):
@@ -40,19 +40,19 @@ def identify_money_symbol(text):
     return(text)
 
 def identify_phone_number(text):
-    text=re.sub('(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})', 'phone_number',text)
+    text=re.sub(r'(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})', 'phone_number',text)
     return(text)
 
 def identify_number(text):
-    text=re.sub('\d+(\.\d+)?', 'number',text)
+    text=re.sub(r'\d+(\.\d+)?', 'number',text)
     return(text)
 
 def remove_punctuation(text):
-    text=re.sub('[^\w\s]', ' ',text)
+    text=re.sub(r'[^\w\s]', ' ',text)
     return(text)
 
 def remove_multiple_spaces(text):
-    text=re.sub('\s+', ' ',text)
+    text=re.sub(r'\s+', ' ',text)
     return(text)
 
 def remove_trailing_white_spaces(text):
@@ -86,8 +86,6 @@ def get_lemmatized_text(text):
 #     parser = GingerIt()
 #     out=parser.parse(text)
 #     return(out['result'])
-
-
 
 
 def preprocess_text(text,processing_steps):

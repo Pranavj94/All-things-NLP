@@ -57,11 +57,7 @@ class data_explorer:
             val = str(val)
   
             # split the value
-            tokens = val.split()
-      
-            # Converts each token into lowercase
-            for i in range(len(tokens)):
-                tokens[i] = tokens[i].lower()
+            tokens = val.lower().split()
       
             comment_words += " ".join(tokens)+" "
 
