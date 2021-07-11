@@ -1,0 +1,14 @@
+pandas
+re
+json
+numpy
+random
+tqdm
+nltk
+wordcloud
+matplotlib
+IPython
+
+
+
+
