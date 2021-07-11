@@ -28,7 +28,7 @@ def readme():
 
 setup(
     name="allthingsnlp",
-    version="0.0.3",
+    version="0.0.4",
     description="All things NLP - An open source, low-code NLP library in Python.",
     long_description=readme(),
     long_description_content_type="text/markdown",
