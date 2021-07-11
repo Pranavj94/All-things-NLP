@@ -20,15 +20,15 @@ def readme():
     return README
 
 
-with open("requirements.txt") as f:
-    required = f.read().splitlines()
+#with open("requirements.txt") as f:
+#    required = f.read().splitlines()
 
 #with open("requirements-optional.txt") as f:
 #    optional_required = f.read().splitlines()
 
 setup(
     name="allthingsnlp",
-    version="0.0.1",
+    version="0.0.3",
     description="All things NLP - An open source, low-code NLP library in Python.",
     long_description=readme(),
     long_description_content_type="text/markdown",
@@ -44,6 +44,6 @@ setup(
     ],
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     include_package_data=True,
-    install_requires=required
+    install_requires=['pandas','numpy','tqdm','nltk','wordcloud','matplotlib','IPython']
     #extras_require={"full": optional_required,},
 )
