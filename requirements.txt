@@ -5,6 +5,8 @@ nltk
 wordcloud
 matplotlib
 IPython
+pytest
+sklearn
 
 
 
